@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Island Moments');
+/* pour faire un reset sur les parametres par defaut d'un navigateur */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* le style du body */
+body{
+    background-image: url("image/background-opacity.png");
+    font-family:'Island Moments';
+    font-size: x-large;
+    font-style: bold;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; /*pour ajuster size du background*/
+    background-repeat: repeat;
+    background-position: center; /*pour que l'image reste au centre*/
+    z-index: 100;
+    
+}
+.logo img {
+    margin-top: 17px;
+    height: 120px; 
+    width: auto; 
+}
+ .navbar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;  
+}
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-items: center;
+    align-items: center;
+}
+.navbar .nav-links ul{
+    color: #CD8332;
+    display: flex;
+    justify-items: center;
+    
+    
+
+}
+.nav-links li {
+    margin-right: 30px;
+    
+    
+}
+.nav-links li a{
+    color: #AF713D;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+nav li:hover{
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #E9967A;
+    border-radius: 12px;
+}
