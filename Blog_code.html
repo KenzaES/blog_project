@@ -1,37 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test_learn_style.css">
-  <link href='https://fonts.googleapis.com/css?family=Island Moments' rel='stylesheet'>
-  <script src="code.js"></script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bolg_style.css">
+  <script src="blog_java.js"></script> 
   <title>blog</title>
-</head>
+  <!--font style from font google  -->
+  <link href='https://fonts.googleapis.com/css?family=Island Moments' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></head>
 
 <body>
 <!----------------- Nav bar section ---------------->
-  <nav class="navbar">
-    <a href="#" class="logo"><img src="image/logoblog.svg" alt=""></a>
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Cuisine</a></li>
-        <li><a href="#">Fashion</a></li>
-        <li><a href="#">Artisanal Art</a></li>
-    </ul> 
+  <header>
+    <img class="logo" src="image/logoblog.svg" alt="kenyBlog">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li>  <a href="#hero_section">Home</a>            </li>
+        <li>  <a href="#About_section">About</a>           </li>
+        <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
+        <li>  <a href="#fashion_section">Fashion</a>         </li>
+        <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
+      </ul> 
       <!-- NavMobile -->
       <div class="burger_menu">
         <i class="fa-duotone fa-bars" style="--fa-primary-color: #cd8332; --fa-secondary-color: #cd8332;"></i>
-
       </div>
-        </nav>
+    </nav>
+      </header>
  
-<!------------------- section hero ---------------->
-  <div class="hero_section">
-    
+<!-------------------hero section---------------->
+  <main class="hero_section" id="hero_section">
+    <h1> Trends </h1>
+    <div class="bloc_hero">
+      <article  id="trend1">
+        <h3> The story of Moroccan Caftan</h3>
+        <img class="caftan_trend" src="image/caftan story.jpg" alt="Caftan">
+        <p>Although the origins of the Caftans are said to be outside of Morocco and it wasn’t originally worn only by women, the Moroccan Caftan seems to be its own thing.</p>
+        <a class="button_read" href="#">Read more</a>
+      </article>
+      <article  id="trend2">
+        <h3> Moroccan square zellige </h3>
+        <img class="zelig_trend" src="image/zelig_trend.jpg" alt="Zelig">
+        <p>You should note that this kind of decoration has spiritual roots. Religious concepts and sacred Islamic texts had the most important influence on this art.</p>
+        <a class="button_read" href="#">Read more</a>
+      </article>
+    </div>
+  </main>
+<!------------------- About section ---------------->
+  <section class="About_section" id="About_section">
+    <h1> About </h1>
+    <p>
+      This blog is dedicated to represent the rich and colorful Moroccan Culture, here you’ve find different articles around Cuisine, Fashion and Artisanal art.
+    </p>
+    <img class="img_about"  src="image/maroc-traditions.jpg" alt="Moroccan traditions">
+    <a class="subcribe" href="#">Subcribe to our Blog</a>
+  </section>
 
-  </div>
-    
+  <!------------------- Cuisine section ---------------->
+  <section class="Cuisine_section" id="Cuisine_section">
+   <h1> Cuisine </h1>
+   <div class="bloc_cuisine">
+    <article class="pastilla">
+      <h3> the Best Moroccan Bastilla </h3>
+      <p>Gastronomy enthusiasts, top chefs, and foodies worldwide have long been aware that Moroccan cuisine leads in exciting and exotic flavors when up against the seven continents.</p>
+      <img class="pastilla_cuisine" src="image/pastilla.png" alt="pastilla">
+      <a class="button_read" href="#">Read more</a>   
+    </article>
+    <article class="tajine">
+      <h3> Tajine </h3>
+      <p>Moroccan tajines often combine lamb or chicken with a medley of ingredients or seasonings: olives, quinces, apples, pears, apricots, raisins, prunes, dates  </p>
+      <img class="tajine_cuisine" src="image/tajine.png" alt="tajine">
+      <a class="button_read" href="#">Read more</a>   
+    </article>
+    <article class="couscous">
+      <h3> Couscous </h3>
+      <p>At one point in time, couscous was also the national dish for southern Spain; however, when the Arabs were expelled it became illegal to eat couscous by the decree of the inquisition.  </p>
+      <img class="tajine_cuisine" src="image/couscous.jpg" alt="couscous">
+      <a class="button_read" href="#">Read more</a>
+    </article>
+   </div>
+  </section>
+<!------------------- Fashion section ---------------->
+<section class="fashion_section" id="fashion_section">
+  <h1> Fashion Tradition </h1>
+  <div class="bloc_fashion">
+  <article class="Caftan">
+    <h3> The story of Moroccan Caftan</h3>
+    <p>Although the origins of the Caftans are said to be outside of Morocco and it wasn’t originally worn only by women, the Moroccan Caftan seems to be its own thing.</p>
+    <img class="caftan_fashion" src="image/caftan story.jpg" alt="Caftan">
+    <a class="button_read" href="#">Read more</a>   
+  </article>
+  <article class="Jellaba">
+    <h3> The Moroccan Djellaba </h3>
+    <p>Many cultures have a go-to outfit or piece of clothing – something that’s comfortable, versatile, a stylish.
+
+      In Morocco, it’s the djellaba, a long garment with sleeves and a hood that comes in dozens of different styles and can be worn by men and women.</p>
+    <img class="jellaba_fashion" src="image/djellaba.jpg" alt="jellaba">
+    <a class="button_read" href="#">Read more</a>   
+  </article>
+  <article class="Babouche">
+    <h3> THE GENUINE MOROCCAN LEATHER BABOUCHE </h3>
+    <p>We explain all about this handmade product typical of Moroccan culture and shaped by hand, from generation to generation, by craftsmen babouchiers</p>
+    <img class="babouche_fashion" src="image/babouch.jpg" alt="babouche">
+    <a class="button_read" href="#">Read more</a>   
+  </article> 
+</div>
+</section> 
+<!------------------- artisanal section ---------------->
+<section class="artisanal_section" id="artisanal_section">
+  <h1> Artisanal Art </h1>
+  <div class="bloc_art">
+  <article class="Zelig">
+    <h3> Moroccan square zellige </h3>
+    <p>You should note that this kind of decoration has spiritual roots. Religious concepts and sacred Islamic texts had the most important influence on this art.</p>
+    <img class="zelig_artisanal" src="image/zelig_trend.jpg" alt="Zelig">
+    <a class="button_read" href="#">Read more</a>   
+  </article> 
+  <article class="debagh">
+    <h3> Souk Debbaqh, the art of traditional tanning </h3>
+    <p>Morocco is a global reference in leather goods. In fact, it is the country that gave its name to the leather industry. Let's take a guided tour of the tanneries of Marrakech to learn more about this ancient technique.</p>
+    <img class="tanning_artisanal" src="image/souk-debbagh.jpg" alt="Zelig">
+    <a class="button_read" href="#">Read more</a>   
+  </article> 
+
+<article class="pottery">
+  <h3> Moroccan Pottery </h3>
+  <p>The Art of Pottery is one of Morocco’s renowned know-how.
+    Morocco’s pottery and ceramics are one of the real treasures of the Kingdom with diverse traditional and modern colors and designs influenced by Amazigh and Islamic art and before them, absorbing Phoenician, Roman, and Byzantine designs.
+    Artisans carry on centuries-old traditions in their designs that are passed on through families.</p>
+  <img class="tanning_artisanal" src="image/pottery.jpg" alt="Zelig">
+  <a class="button_read" href="#">Read more</a>   
+</article> 
+</div>
+</section>
+
 </body>
+
 </html>

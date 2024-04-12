@@ -10,27 +10,35 @@
 /* le style du body */
 body{
     background-image: url("image/background-opacity.png");
-    font-family:'Island Moments';
-    font-size: x-large;
-    font-style: bold;
     width: 100vw;
     height: 100vh;
     background-size: cover; /*pour ajuster size du background*/
     background-repeat: repeat;
     background-position: center; /*pour que l'image reste au centre*/
     z-index: 100;
+    overflow-x: hidden;
     
 }
-.logo img {
+header{
+   display: inline-flex;
+
+} 
+.logo{
     margin-top: 17px;
     height: 120px; 
     width: auto; 
+
 }
  .navbar{
-    position: absolute;
+    
     display: flex;
-    align-items: center;
-    justify-content: space-between ;  
+    justify-content: center;
+    align-content: center; 
+    font-family:'Island Moments';
+    font-size: x-large;
+    font-style: bold;
+    margin-left: 30%;
+   
 }
 .nav-links {
     display: flex;
@@ -42,15 +50,11 @@ body{
     color: #CD8332;
     display: flex;
     justify-items: center;
-    
-    
-
 }
 .nav-links li {
-    margin-right: 30px;
-    
-    
+    margin-right: 30px;    
 }
+
 .nav-links li a{
     color: #AF713D;
     font-size: xx-large;
@@ -62,4 +66,69 @@ nav li:hover{
     text-decoration: underline;
     text-decoration-color: #E9967A;
     border-radius: 12px;
+    transform: translateY(-10px);
+}
+.hero_section{
+    text-align: center;
+}
+.bloc_hero{
+    margin-top: 20px;
+    
+}
+h1{
+    color: #CD8332;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+h3{
+    color: #E9967A;
+    font-size: x-large;
+    font-weight: bold;  
+}
+.caftan_trend{
+    width: 80%;
+    height: 20% ;
+    border-radius: 16px;
+    
+}
+.zelig_trend{
+    width: 80%;
+    height: 20% ;
+    border-radius: 16px;
+}
+.bloc_hero{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    column-gap: 5%;
+    
+}
+#trend1{
+    width: 100%;
+    /* height: fit-content; */
+    
+    background-color: white;
+    border-radius: 16px;
+}
+#trend2{
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;   
+}
+.button_read{
+    background-color: #E9967A;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+.button_read:hover{
+    color: #E9967A;
+    background-color: antiquewhite;
 }
