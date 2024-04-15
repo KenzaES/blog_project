@@ -2,44 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0"/>
   <link rel="stylesheet" href="bolg_style.css">
   <script src="blog_java.js"></script> 
   <title>blog</title>
   <!--font style from font google  -->
-  <link href='https://fonts.googleapis.com/css?family=Island Moments' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></head>
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacques+Francois&family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+<!-- fa fa font -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 <!----------------- Nav bar section ---------------->
-  <header>
+  <header class="group_header">
     <img class="logo" src="image/logoblog.svg" alt="kenyBlog">
     <nav class="navbar">
       <ul class="nav-links">
-        <li>  <a href="#hero_section">Home</a>            </li>
+        <li>  <a href="Blog_code.html">Home</a>            </li>
         <li>  <a href="#About_section">About</a>           </li>
         <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
         <li>  <a href="#fashion_section">Fashion</a>         </li>
         <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
+        <li>  <a href="#">Add Article</a>   </li>
       </ul> 
       <!-- NavMobile -->
-      <div class="burger_menu">
+      <!-- <div class="burger_menu">
         <i class="fa-duotone fa-bars" style="--fa-primary-color: #cd8332; --fa-secondary-color: #cd8332;"></i>
-      </div>
+      </div> -->
+      
     </nav>
-      </header>
- 
+    <div class="login_popup">
+      <button class="login_popup_btn">Login</button> 
+    </div>
+    <!-----------------------sign in  ------------------->
+    
+</header>
 <!-------------------hero section---------------->
   <main class="hero_section" id="hero_section">
-    <h1> Trends </h1>
+    <h1 class="titleTrend"> Trends </h1>
     <div class="bloc_hero">
       <article  id="trend1">
         <h3> The story of Moroccan Caftan</h3>
         <img class="caftan_trend" src="image/caftan story.jpg" alt="Caftan">
         <p>Although the origins of the Caftans are said to be outside of Morocco and it wasn’t originally worn only by women, the Moroccan Caftan seems to be its own thing.</p>
-        <a class="button_read" href="#">Read more</a>
+        <a class="button_read" href="post_page_trend1.html">Read more</a>
       </article>
       <article  id="trend2">
         <h3> Moroccan square zellige </h3>
@@ -49,14 +55,20 @@
       </article>
     </div>
   </main>
+
+
 <!------------------- About section ---------------->
   <section class="About_section" id="About_section">
     <h1> About </h1>
-    <p>
-      This blog is dedicated to represent the rich and colorful Moroccan Culture, here you’ve find different articles around Cuisine, Fashion and Artisanal art.
-    </p>
-    <img class="img_about"  src="image/maroc-traditions.jpg" alt="Moroccan traditions">
-    <a class="subcribe" href="#">Subcribe to our Blog</a>
+    <div class="container_about">
+      <img class="img_about"  src="image/maroc-traditions.jpg" alt="Moroccan traditions">
+      <div class="bloc_about">
+      <p>
+        Step into the world of Moroccan culture with this blog crafted by Kenza, a proud Moroccan keen on sharing her country's vibrant heritage. Through articles dedicated to Moroccan cuisine, fashion, and artisanal art, Kenza offers an immersive journey into the richness and diversity of Moroccan traditions. From the tantalizing flavors of tagines to the intricate beauty of traditional garments and the skilled craftsmanship of local artisans, each piece reflects the essence of Morocco's cultural tapestry, inviting readers to explore and appreciate its timeless charm.
+      </p>
+      <button class="subcribe" href="#">Subcribe to our Blog</button>
+      </div>
+    </div>
   </section>
 
   <!------------------- Cuisine section ---------------->
@@ -78,7 +90,7 @@
     <article class="couscous">
       <h3> Couscous </h3>
       <p>At one point in time, couscous was also the national dish for southern Spain; however, when the Arabs were expelled it became illegal to eat couscous by the decree of the inquisition.  </p>
-      <img class="tajine_cuisine" src="image/couscous.jpg" alt="couscous">
+      <img class="couscous_cuisine" src="image/couscous.jpg" alt="couscous">
       <a class="button_read" href="#">Read more</a>
     </article>
    </div>
@@ -95,14 +107,12 @@
   </article>
   <article class="Jellaba">
     <h3> The Moroccan Djellaba </h3>
-    <p>Many cultures have a go-to outfit or piece of clothing – something that’s comfortable, versatile, a stylish.
-
-      In Morocco, it’s the djellaba, a long garment with sleeves and a hood that comes in dozens of different styles and can be worn by men and women.</p>
+    <p>Many cultures have a go-to outfit or piece of clothing – something that’s comfortable, versatile, a stylish. In Morocco, it’s the djellaba, a long garment with sleeves and a hood that comes in dozens of different styles and can be worn by men and women.</p>
     <img class="jellaba_fashion" src="image/djellaba.jpg" alt="jellaba">
     <a class="button_read" href="#">Read more</a>   
   </article>
   <article class="Babouche">
-    <h3> THE GENUINE MOROCCAN LEATHER BABOUCHE </h3>
+    <h3> The genuine Moroccan leather babouche </h3>
     <p>We explain all about this handmade product typical of Moroccan culture and shaped by hand, from generation to generation, by craftsmen babouchiers</p>
     <img class="babouche_fashion" src="image/babouch.jpg" alt="babouche">
     <a class="button_read" href="#">Read more</a>   
@@ -116,13 +126,13 @@
   <article class="Zelig">
     <h3> Moroccan square zellige </h3>
     <p>You should note that this kind of decoration has spiritual roots. Religious concepts and sacred Islamic texts had the most important influence on this art.</p>
-    <img class="zelig_artisanal" src="image/zelig_trend.jpg" alt="Zelig">
+    <img class="zelig_art" src="image/zelig_trend.jpg" alt="Zelig">
     <a class="button_read" href="#">Read more</a>   
   </article> 
   <article class="debagh">
     <h3> Souk Debbaqh, the art of traditional tanning </h3>
     <p>Morocco is a global reference in leather goods. In fact, it is the country that gave its name to the leather industry. Let's take a guided tour of the tanneries of Marrakech to learn more about this ancient technique.</p>
-    <img class="tanning_artisanal" src="image/souk-debbagh.jpg" alt="Zelig">
+    <img class="tanning_art" src="image/souk-debbagh.jpg" alt="Zelig">
     <a class="button_read" href="#">Read more</a>   
   </article> 
 
@@ -130,12 +140,28 @@
   <h3> Moroccan Pottery </h3>
   <p>The Art of Pottery is one of Morocco’s renowned know-how.
     Morocco’s pottery and ceramics are one of the real treasures of the Kingdom with diverse traditional and modern colors and designs influenced by Amazigh and Islamic art and before them, absorbing Phoenician, Roman, and Byzantine designs.
-    Artisans carry on centuries-old traditions in their designs that are passed on through families.</p>
-  <img class="tanning_artisanal" src="image/pottery.jpg" alt="Zelig">
+  </p>
+  <img class="pot_art" src="image/pottery.jpg" alt="Zelig">
   <a class="button_read" href="#">Read more</a>   
 </article> 
 </div>
 </section>
+<footer>
+ <div class=”container_footer”>
+  <div class=”bloc_subcribe”>
+    <h3 id="subcribe_text">Subscribe to our newsletter</h3>
+    <p>Keep in touch with our  passionante new articles about the rich and beautiful culture of Morocco.</p>
+    <form action="#">
+      <input type="text" placeholder="Your email" required>
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </div> 
+  <div class=”container_down_footer”>
+    <img src="image/logoblog.svg" alt="kenyBlog">
+    <p class="copyright"> kenyBlog_simplon © 2024</p>
+  </div>  
+ </div>
+</footer>
 
 </body>
 

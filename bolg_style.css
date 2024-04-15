@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Island Moments');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 /* pour faire un reset sur les parametres par defaut d'un navigateur */
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    box-sizing: border-box;
 }
 
-/* le style du body */
+
+/* ------------------le style du body-------------- */
 body{
     background-image: url("image/background-opacity.png");
     width: 100vw;
@@ -15,111 +17,286 @@ body{
     background-size: cover; /*pour ajuster size du background*/
     background-repeat: repeat;
     background-position: center; /*pour que l'image reste au centre*/
-    z-index: 100;
     overflow-x: hidden;
-    
+    margin: auto;   
 }
-header{
-   display: inline-flex;
+    h1{
+        color: #CD8332;
+        font-size: xx-large;
+        font-weight: bolder;
+        text-align: center;
+        font-family: "Jacques Francois", serif;
+       
+    }
+    h3{
+        color: #E9967A;
+        font-size: x-large;
+        font-weight: bold; 
+        font-family: "Jacques Francois", serif; 
+    }
+    p{
+        line-height: 1.6;
+        font-family: "Jacques Francois", serif;
+    }
 
-} 
-.logo{
-    margin-top: 17px;
-    height: 120px; 
-    width: auto; 
-
-}
- .navbar{
-    
+/* ------------------le style du header section -------------- */
+.group_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 120px;
+    width: auto;
+  }
+  
+  .navbar {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-content: center; 
-    font-family:'Island Moments';
-    font-size: x-large;
-    font-style: bold;
-    margin-left: 30%;
-   
-}
-.nav-links {
-    display: flex;
+  }
+  
+  .nav-links {
     list-style-type: none;
-    justify-items: center;
-    align-items: center;
-}
-.navbar .nav-links ul{
-    color: #CD8332;
     display: flex;
-    justify-items: center;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  .navbar li a:hover{
+    text-decoration: none;
+    color: #E9967A;
+    background-color: wheat;
+    border-radius: 12px;
+    
 }
-.nav-links li {
-    margin-right: 30px;    
-}
-
-.nav-links li a{
+nav li:hover{
+   transform: translateY(-10px);
+   }
+  
+  .nav-links li:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-links li a {
+    font-family: "Jacques Francois", serif;
     color: #AF713D;
     font-size: xx-large;
-    font-weight: bold;
-}
-
-nav li:hover{
+    font-weight: italic;
     text-decoration: none;
-    text-decoration: underline;
-    text-decoration-color: #E9967A;
-    border-radius: 12px;
-    transform: translateY(-10px);
-}
+  }
+  
+  .login_popup {
+    margin-right: 5%;
+      }
+  .login_popup_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: #E9967A;
+        border: 2px solid wheat;
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 16px;
+        font-weight: italic;
+        align-self: center;
+    }
+    .login_popup_btn:hover{
+        color: #E9967A;
+        background-color: antiquewhite;
+        transform: translateY(-10px);
+    }
+  
+
+/* ------------------le style du hero section -------------- */
 .hero_section{
+    position: relative;
+    
+    
+    
+    text-align: center;  
+}
+.titleTrend{
     text-align: center;
+}
+.hero_section img{
+    width: 95%;
+    height: 400px;
+    border-radius: 5px;
 }
 .bloc_hero{
     margin-top: 20px;
     
 }
-h1{
-    color: #CD8332;
-    font-size: xx-large;
-    font-weight: bolder;
-    text-align: center;
-}
-h3{
-    color: #E9967A;
-    font-size: x-large;
-    font-weight: bold;  
-}
-.caftan_trend{
-    width: 80%;
-    height: 20% ;
-    border-radius: 16px;
-    
-}
-.zelig_trend{
-    width: 80%;
-    height: 20% ;
-    border-radius: 16px;
-}
+
 .bloc_hero{
     display: grid;
     grid-template-columns: auto auto;
-    
     column-gap: 5%;
+    margin: 5%;
     
 }
 #trend1{
-    width: 100%;
-    /* height: fit-content; */
-    
-    background-color: white;
+    background-color: rgba(255,255,255, 0.6);
     border-radius: 16px;
+    height: fit-content; 
+    text-align: center;
 }
 #trend2{
-    width: 100%;
-    background-color: white;
-    border-radius: 16px;   
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 16px;
+    height: fit-content; 
+    text-align: center;  
 }
+/* ------------------le style du about section -------------- */
+.About_section{
+   text-align: center;
+   padding-bottom: 3%;
+   
+}
+.bloc_about{
+    margin: 5%;
+    grid-template-columns: auto;
+    background-color: rgba(255,255,255, 0.6);
+    border-radius: 16px;
+
+   }
+
+.img_about{
+    
+    float: inline-start;
+    width: 20%;
+    height: 100%;
+    clip-path: circle(50%);
+    z-index: unset ;
+    
+     
+}
+/* ------------------le style du cuisine section -------------- */
+.bloc_cuisine {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5%;
+    margin: 5%;
+    text-align: justify;
+}
+
+.pastilla,
+.tajine,
+.couscous {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    height: 100%; 
+    text-align: center;
+}
+
+.Cuisine_section img{
+    width: 95%;
+    height: 200px;
+    border-radius: 5px;
+}
+/* ------------------le style du fashion section -------------- */
+.bloc_fashion{
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    column-gap: 5%;
+    margin: 5%;
+    text-align: justify;
+}
+.Caftan,
+.Babouche,
+.Jellaba
+{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    height: 100%; 
+    text-align: center;
+}
+
+.fashion_section img{
+    width: 95%;
+    height: 200px;
+    border-radius: 5px;
+}
+ /* ------------------le style du artisanal section -------------- */   
+.bloc_art{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5%;
+    margin: 5%;
+    text-align: justify;
+}
+
+.Zelig, 
+.pottery,
+.debagh{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    height: 100%; 
+    text-align: center;
+}
+.artisanal_section img{
+    width: 95%;
+    height: 200px;
+    border-radius: 5px;
+}
+/* --------------footer section------------- */
+footer{
+    background-color: burlywood;
+    opacity: 90%;   
+}
+
+.container_footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .bloc_subcribe {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+  
+  .container_down_footer {
+   
+    padding: 10px;
+    flex: 50%;
+  }
+/* 
+
+/* ------------------le style des boutons -------------- */
+.subcribe{
+    background-color: #E9967A;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-weight: bold;
+}
+.subcribe:hover{
+    color: #E9967A;
+    background-color: antiquewhite;
+}
+
 .button_read{
     background-color: #E9967A;
     border: none;
     color: black;
+    font-weight: bold;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -132,3 +309,51 @@ h3{
     color: #E9967A;
     background-color: antiquewhite;
 }
+/* --------------Page read more story caftan --------*/
+.page_trend1_caftan{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+.main_page_trend1 {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    
+    width: 70%;
+    float: left;
+}
+.main_page_trend1 img{
+    width: 50%;
+    height: 40%;  
+    border-radius: 16px;
+    margin-left: 25%;
+}
+#img_princess{
+    width: 50%;
+    height: 20%;
+    float: right;
+}
+
+.comment{
+padding:3%;
+    
+}
+
+.fa-thumbs-up{
+    width: 5rem;
+    height: 3rem;
+}
+.apreciation{
+    display: grid;
+    grid-template-columns: auto auto;  
+}
+/* 
+aside {
+    width: 30%;
+    float: right;
+    background-color: #f1f1f1;
+    height: 100vh;
+} */
+
+/* Like option */
