@@ -49,36 +49,73 @@ function login_test() {
 
 
 //----function comment
-let data=''; 
-function myFunction()
-{
  
+function myFunction() {
   let name = document.getElementById("username").value;
   let email = document.getElementById("e-mail").value;
-  let comment = document.getElementById("comment").value;        
-  var data = {
-    username: name,
-    Email:email,
-    Comment: comment
-  }; 
+  let comment = document.getElementById("comment").value; 
+  let time = new Date().toLocaleTimeString();
+  let date = new Date().toLocaleDateString();       
   
-  document.getElementById("dataUser").innerHTML =data.username;
-  document.getElementById("dataMail").innerHTML =data.Email;
-  document.getElementById("dataComment").innerHTML =data.Comment;
+  let newCommentHTML = `
+    <div class="container_comment" style="margin-top: 20px;overflow: hidden; text-overflow: ellipsis ;background-color: #eb8f15">
+      <div class="image_user">
+        <img src="image/signIn_innactive.svg">
+        <div class="user_data">
+          <p>${name}</p>
+          <p>${email}</p>
+        </div>
+      </div>
+      <div class="comment_details" style="margin-top: 20px;" >
+        <p><i class="fa fa-clock-o"></i> ${time}</p>
+        <p><i class="fa fa-calendar"></i> ${date}</p>
+      </div>
+      <div class="comment_body">
+        <p>${comment}</p>
+      </div>
+      
+    </div>
+  `;
+
+    // Append new comment to old ones
+    let commentsContainer = document.getElementById("coment_post");
+    commentsContainer.innerHTML = newCommentHTML + commentsContainer.innerHTML;
+  
+    // Store comment in localStorage to keep our comment 
+    let commentsData = JSON.parse(localStorage.getItem("comments")) || [];
+    commentsData.unshift({ name, email, comment, time, date, html: newCommentHTML });
+    localStorage.setItem("comments", JSON.stringify(commentsData));
+  
+    // Clear input fields and hide comment popup
+    document.getElementById("username").value = "";
+    document.getElementById("e-mail").value = "";
+    document.getElementById("comment").value = "";
+    document.getElementById("comment_pop").style.display = "none";
+  }
+  
+  // Load comments from localStorage when the page loads
+  window.addEventListener("load", function() {
+    let commentsData = JSON.parse(localStorage.getItem("comments")) || [];
+    let commentsHTML = '';
+    commentsData.forEach(comment => {
+      commentsHTML += comment.html;
+    });
+    document.getElementById("coment_post").innerHTML = commentsHTML;
+  });
+  
+
+
+  document.getElementById("username").value = "";
+  document.getElementById("e-mail").value = "";
+  document.getElementById("comment").value = "";
   document.getElementById("comment_pop").style.display = "none";
-}// i should add append method
+}
 
 
 
-
-
-
-
-
-
-
-
-
+// // generate date
+// const date = new Date();
+// document.getElementById("date_publish").innerHTML = date.getHours();
 
 
 // ----function like counter ------

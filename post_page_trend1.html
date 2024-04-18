@@ -77,41 +77,39 @@
 </main>  
 <!-- section of comments and like -->
 <section class="apreciation">
- <div class="comment">
-  <button class="com_btn" onclick="open_comment_pop()" id="login_btn">Comment</button>
-</div>
-  <div class="comment_popup" id="comment_pop">
-    <div class="comment_form">
-      <h3>LEAVE A REPLY</h3>
-     <form id="myForm">
-      <label>Username:</label>
-      <input name="username" placeholder="Username" id="username" required>
-      <label>Email:</label>
-      <input name="Email" type="email" placeholder="Email" id="e-mail" required>
-      <label>commentaire:</label>
-      <textarea name="comment" type="comment" placeholder="" id="comment" required>
-        
-      </textarea>
-      <button type="button" class="btn" onclick="myFunction()">submit</button>
-      <button onclick="toggle_comment()" type="button" class="btn_cancel" >Close</button>
-     </form>
+  <div class="input_btn_appreciation">
+    <div class="comment">
+      <button class="com_btn" onclick="open_comment_pop()" id="login_btn">Comment</button>
     </div>
-    
-  </div>
-  <div class="container_com">
-    <div class="image_user">
-      <img src="image/img_com.avif" class="img_com" alt="">
+    <div class="comment_popup" id="comment_pop">
+      <div class="comment_form">
+        <h3>LEAVE A REPLY</h3>
+        <form id="myForm">
+          <label>Username:</label>
+          <input name="username" placeholder="Username" id="username" required>
+          <label>Email:</label>
+          <input name="Email" type="email" placeholder="Email" id="e-mail" required>
+          <label>commentaire:</label>
+          <textarea name="comment" type="comment" placeholder="" id="comment" required>
+          </textarea>
+          <button type="button" class="btn" onclick="myFunction()">submit</button>
+          <button onclick="toggle_comment()" type="button" class="btn_cancel" >Close</button>
+        </form>
+      </div>
     </div>
-    div  
-  <p  id="dataUser"></p>
-  <p  id="dataMail"></p>
-</div>
-  <p  id="dataComment"></p>
+    <div class="appreciation_like">
+      <button onclick="clickCounter()" class="btn"><i class="fa fa-thumbs-up fa-3x"  aria-hidden="true"></i></button>
+      <p id="demo"></p>
+    </div>
   </div>
-  <div class="appreciation_like">
-    <button onclick="clickCounter()" class="btn"><i class="fa fa-thumbs-up fa-3x"  aria-hidden="true"></i></button>
-    <p id="demo"></p>
+ <!-- comments display section -->
+  <div class="container_comment " id="coment_post">
+
+  
   </div>
+
+
+  
 
 </section>
 
