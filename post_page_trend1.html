@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <link rel="stylesheet" href="bolg_style.css">
   <script src="blog_java.js"></script> 
   <title>blog</title>
@@ -12,19 +12,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacques+Francois&family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
 <!-- fa fa font -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- scroll effect -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<body class="page_trend1_caftan">
-   <!----------------- Nav bar section ---------------->
+<body>
+  <div class="page_trend1_caftan" id="main">
+<!----------------- Nav bar section ---------------->
   <header class="group_header">
     <img class="logo" src="image/logoblog.svg" alt="kenyBlog">
     <nav class="navbar">
       <ul class="nav-links">
-        <li>  <a href="#hero_section">Home</a>            </li>
+        <li>  <a href="Blog_code.html">Home</a>            </li>
         <li>  <a href="#About_section">About</a>           </li>
         <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
         <li>  <a href="#fashion_section">Fashion</a>         </li>
         <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
+        <li>  <a href="#">Add Article</a>   </li>
       </ul> 
       <!-- NavMobile -->
       <!-- <div class="burger_menu">
@@ -33,28 +33,24 @@
       
     </nav>
     <div class="login_popup">
-      <button class="login_popup_btn">Login</button> 
+      <button onclick="open_log_pop()" class="login_popup_btn" id="login_btn">Login</button> 
     </div>
-   
-    
 
-    <!-----------------------sign in  ------------------->
-    
-  <!-- Sign up form -->
-  <!-- <form action="website_DB">
-    <fieldset>
-     <legend>Sign In:</legend>
-     <label for="email">Email:</label>
-     <input type="email" id="email" name="email"><br><br>
-     <label for="pwd">Password:</label>
-     <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
-     <input type="submit" value="Submit">
-     <input type="submit" value="continue as Guest">
-    </fieldset>
-   </form> -->
-  
 </header>
-
+<!-----------------------sign in  ------------------->
+<div class="login_popup_wind" id="log_wind">
+  <div class="formPopup" >
+    <h2>Please Log in</h2>
+    <form action="" class="formContainer">
+      <label>Username:</label>
+      <input name="username" placeholder="Username" id="userAdmin" required>
+      <label>Password:</label>
+      <input name="password" type="password" placeholder="Password" id="keyAdmin" required>
+      <button type="submit" class="btn" onclick="login_test()">submit</button>
+      <button onclick="togglepopup()" type="button" class="btn_cancel" >Close</button>
+    </form> 
+  </div>
+</div>
 <!-------------------Contenu post---------------->
 <main class="main_page_trend1">
     
@@ -79,26 +75,49 @@
         Nowadays, we can see more and more famous ladies from all over the world showing up dressed in Caftans. These women are of course interested in the Caftan because of the aesthetics and the cultural background. Among the women who appeared in the red carpet dressed up in a Caftan are: Beyoncé, Angelina Jolie, Kim Kardashian and her mom, Hillary Clinton, Paris Hilton, Jennifer Lopez and many other beautiful popular ladies. They all looked amazing by the way.
     </p>
 </main>  
+<!-- section of comments and like -->
 <section class="apreciation">
  <div class="comment">
-    <h3>LEAVE A REPLY</h3>
-    <h6> Your email address will not be published. Required fields are marked *</h6>
-<form id="myForm">
-Full name: <input id="userName" type="text" name="fname">
-<br><br>
-Email : <input id="userEmail" type="text" name="email">
-<br><br>
-<textarea id ="userComment" rows="4" cols="50" name="comment"> Enter comment here...</textarea>
-<br><br>
-<input type="button" onclick="myFunction()" value="Submit">
-</form>
-<p id="data"></p>
+  <button class="com_btn" onclick="open_comment_pop()" id="login_btn">Comment</button>
+</div>
+  <div class="comment_popup" id="comment_pop">
+    <div class="comment_form">
+      <h3>LEAVE A REPLY</h3>
+     <form id="myForm">
+      <label>Username:</label>
+      <input name="username" placeholder="Username" id="username" required>
+      <label>Email:</label>
+      <input name="Email" type="email" placeholder="Email" id="e-mail" required>
+      <label>commentaire:</label>
+      <textarea name="comment" type="comment" placeholder="" id="comment" required>
+        
+      </textarea>
+      <button type="button" class="btn" onclick="myFunction()">submit</button>
+      <button onclick="toggle_comment()" type="button" class="btn_cancel" >Close</button>
+     </form>
+    </div>
+    
   </div>
-  <div class="appreciation">
+  <div class="container_com">
+    <div class="image_user">
+      <img src="image/img_com.avif" class="img_com" alt="">
+    </div>
+    div  
+  <p  id="dataUser"></p>
+  <p  id="dataMail"></p>
+</div>
+  <p  id="dataComment"></p>
+  </div>
+  <div class="appreciation_like">
     <button onclick="clickCounter()" class="btn"><i class="fa fa-thumbs-up fa-3x"  aria-hidden="true"></i></button>
     <p id="demo"></p>
   </div>
+
 </section>
+
+
+
+
 <!-- 
 
 <aside>

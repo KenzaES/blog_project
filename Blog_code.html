@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <link rel="stylesheet" href="bolg_style.css">
   <script src="blog_java.js"></script> 
   <title>blog</title>
@@ -13,6 +13,7 @@
 <!-- fa fa font -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
+  <div class="body_main" id="main">
 <!----------------- Nav bar section ---------------->
   <header class="group_header">
     <img class="logo" src="image/logoblog.svg" alt="kenyBlog">
@@ -32,11 +33,26 @@
       
     </nav>
     <div class="login_popup">
-      <button class="login_popup_btn">Login</button> 
+      <button onclick="open_log_pop()" class="login_popup_btn" id="login_btn">Login</button> 
     </div>
-    <!-----------------------sign in  ------------------->
-    
+
 </header>
+<!-----------------------sign in  ------------------->
+<div class="login_popup_wind" id="log_wind">
+  <div class="formPopup" >
+    <h2>Please Log in</h2>
+    <form action="" class="formContainer">
+      <label>Username:</label>
+      <input name="username" placeholder="Username" id="userAdmin" required>
+      <label>Password:</label>
+      <input name="password" type="password" placeholder="Password" id="keyAdmin" required>
+      <button type="submit" class="btn" onclick="login_test()">submit</button>
+      <button onclick="togglepopup()" type="button" class="btn_cancel" >Close</button>
+    </form> 
+  </div>
+</div>
+
+
 <!-------------------hero section---------------->
   <main class="hero_section" id="hero_section">
     <h1 class="titleTrend"> Trends </h1>
@@ -163,6 +179,7 @@
  </div>
 </footer>
 
+</div>
 </body>
 
 </html>
