@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacques+Francois&family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
 <!-- fa fa font -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body>
   <div class="body_main" id="main">
 <!----------------- Nav bar section ---------------->
@@ -24,7 +25,7 @@
         <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
         <li>  <a href="#fashion_section">Fashion</a>         </li>
         <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
-        <li>  <a href="#">Add Article</a>   </li>
+        <!-- <li>  <a href="#">Add Article</a>   </li> -->
       </ul> 
       <!-- NavMobile -->
       <!-- <div class="burger_menu">
@@ -32,7 +33,13 @@
       </div> -->
       
     </nav>
-    <div class="login_popup">
+    <!-- Search icon -->
+
+  <a class="fa fa-search fa-2x" href="result_research.html" id="search_btn"></a>
+
+      
+    <!----------- login btn--------------->
+      <div class="login_popup">
       <button onclick="open_log_pop()" class="login_popup_btn" id="login_btn">Login</button> 
     </div>
 
@@ -90,49 +97,70 @@
   <!------------------- Cuisine section ---------------->
   <section class="Cuisine_section" id="Cuisine_section">
    <h1> Cuisine </h1>
+   
    <div class="bloc_cuisine">
     <article class="pastilla">
       <h3> the Best Moroccan Bastilla </h3>
       <p>Gastronomy enthusiasts, top chefs, and foodies worldwide have long been aware that Moroccan cuisine leads in exciting and exotic flavors when up against the seven continents.</p>
       <img class="pastilla_cuisine" src="image/pastilla.png" alt="pastilla">
-      <a class="button_read" href="#">Read more</a>   
+      <a class="button_read" href="#">Read more</a>
+      <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>    
     </article>
     <article class="tajine">
       <h3> Tajine </h3>
       <p>Moroccan tajines often combine lamb or chicken with a medley of ingredients or seasonings: olives, quinces, apples, pears, apricots, raisins, prunes, dates  </p>
       <img class="tajine_cuisine" src="image/tajine.png" alt="tajine">
       <a class="button_read" href="#">Read more</a>   
+      <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a> 
+      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
     </article>
     <article class="couscous">
       <h3> Couscous </h3>
       <p>At one point in time, couscous was also the national dish for southern Spain; however, when the Arabs were expelled it became illegal to eat couscous by the decree of the inquisition.  </p>
       <img class="couscous_cuisine" src="image/couscous.jpg" alt="couscous">
       <a class="button_read" href="#">Read more</a>
+      <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
     </article>
+
    </div>
+   <div class="add_post">
+    <button>
+      <a class="button_read" href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Add post</a>
+    </button>
+   </div>
+
   </section>
 <!------------------- Fashion section ---------------->
 <section class="fashion_section" id="fashion_section">
   <h1> Fashion Tradition </h1>
   <div class="bloc_fashion">
   <article class="Caftan">
-    <h3> The story of Moroccan Caftan</h3>
+    <h3 id="title_search"> The story of Moroccan Caftan</h3>
     <p>Although the origins of the Caftans are said to be outside of Morocco and it wasn’t originally worn only by women, the Moroccan Caftan seems to be its own thing.</p>
     <img class="caftan_fashion" src="image/caftan story.jpg" alt="Caftan">
-    <a class="button_read" href="#">Read more</a>   
+    <a class="button_read" href="#">Read more</a>
+    <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a> 
+    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>     
   </article>
   <article class="Jellaba">
-    <h3> The Moroccan Djellaba </h3>
+    <h3 id="title_search"> The Moroccan Djellaba </h3>
     <p>Many cultures have a go-to outfit or piece of clothing – something that’s comfortable, versatile, a stylish. In Morocco, it’s the djellaba, a long garment with sleeves and a hood that comes in dozens of different styles and can be worn by men and women.</p>
     <img class="jellaba_fashion" src="image/djellaba.jpg" alt="jellaba">
-    <a class="button_read" href="#">Read more</a>   
+    <a class="button_read" href="#">Read more</a>  
+    <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article>
   <article class="Babouche">
-    <h3> The genuine Moroccan leather babouche </h3>
+    <h3 id="title_search"> The genuine Moroccan leather babouche </h3>
     <p>We explain all about this handmade product typical of Moroccan culture and shaped by hand, from generation to generation, by craftsmen babouchiers</p>
     <img class="babouche_fashion" src="image/babouch.jpg" alt="babouche">
     <a class="button_read" href="#">Read more</a>   
+    <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
   </article> 
+
 </div>
 </section> 
 <!------------------- artisanal section ---------------->
@@ -140,25 +168,31 @@
   <h1> Artisanal Art </h1>
   <div class="bloc_art">
   <article class="Zelig">
-    <h3> Moroccan square zellige </h3>
+    <h3 id="title_search"> Moroccan square zellige </h3>
     <p>You should note that this kind of decoration has spiritual roots. Religious concepts and sacred Islamic texts had the most important influence on this art.</p>
     <img class="zelig_art" src="image/zelig_trend.jpg" alt="Zelig">
-    <a class="button_read" href="#">Read more</a>   
+    <a class="button_read" href="#">Read more</a>  
+    <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article> 
   <article class="debagh">
-    <h3> Souk Debbaqh, the art of traditional tanning </h3>
+    <h3 id="title_search"> Souk Debbaqh, the art of traditional tanning </h3>
     <p>Morocco is a global reference in leather goods. In fact, it is the country that gave its name to the leather industry. Let's take a guided tour of the tanneries of Marrakech to learn more about this ancient technique.</p>
     <img class="tanning_art" src="image/souk-debbagh.jpg" alt="Zelig">
-    <a class="button_read" href="#">Read more</a>   
+    <a class="button_read" href="#">Read more</a>  
+    <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article> 
 
 <article class="pottery">
-  <h3> Moroccan Pottery </h3>
+  <h3 id="title_search"> Moroccan Pottery </h3>
   <p>The Art of Pottery is one of Morocco’s renowned know-how.
     Morocco’s pottery and ceramics are one of the real treasures of the Kingdom with diverse traditional and modern colors and designs influenced by Amazigh and Islamic art and before them, absorbing Phoenician, Roman, and Byzantine designs.
   </p>
   <img class="pot_art" src="image/pottery.jpg" alt="Zelig">
-  <a class="button_read" href="#">Read more</a>   
+  <a class="button_read" href="#">Read more</a>  
+  <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
+  <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
 </article> 
 </div>
 </section>

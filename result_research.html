@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <link rel="stylesheet" href="bolg_style.css">
+  <script src="blog_java.js"></script> 
+  <title>blog</title>
+  <!--font style from font google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacques+Francois&family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+<!-- fa fa font -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!----------------- Nav bar section ---------------->
+  <header class="group_header">
+    <img class="logo" src="image/logoblog.svg" alt="kenyBlog">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li>  <a href="Blog_code.html">Home</a>            </li>
+        <li>  <a href="#About_section">About</a>           </li>
+        <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
+        <li>  <a href="#fashion_section">Fashion</a>         </li>
+        <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
+        <!-- <li>  <a href="#">Add Article</a>   </li> -->
+      </ul> 
+      <!-- NavMobile -->
+      <!-- <div class="burger_menu">
+        <i class="fa-duotone fa-bars" style="--fa-primary-color: #cd8332; --fa-secondary-color: #cd8332;"></i>
+      </div> -->
+      
+    </nav>
+    <!----------- login btn--------------->
+      <div class="login_popup">
+      <button onclick="open_log_pop()" class="login_popup_btn" id="login_btn">Login</button> 
+    </div>
+
+  </header>
+<!-----------------------sign in  ------------------->
+<div class="login_popup_wind" id="log_wind">
+  <div class="formPopup" >
+    <h2>Please Log in</h2>
+    <form action="" class="formContainer">
+      <label>Username:</label>
+      <input name="username" placeholder="Username" id="userAdmin" required>
+      <label>Password:</label>
+      <input name="password" type="password" placeholder="Password" id="keyAdmin" required>
+      <button type="submit" class="btn" onclick="login_test()">submit</button>
+      <button onclick="togglepopup()" type="button" class="btn_cancel" >Close</button>
+    </form> 
+  </div>
+</div>
+<!-- search area -->
+<main class="search" onsubmit="search_treat(event)">
+  <form class="search-container">
+    <input type="text" id="search-input" placeholder="Search">
+    <button type="submit" id="search-button">
+      <i class="fa fa-search"></i>
+    </button>
+  </form>
+
+</main>
+<div id="Result"></div>
+
+</body>
+</html>

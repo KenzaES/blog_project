@@ -71,6 +71,7 @@ body{
   
   .nav-links li {
     margin-left: 20px;
+   
   }
   .navbar li a:hover{
     text-decoration: none;
@@ -90,11 +91,11 @@ nav li:hover{
   .nav-links li a {
     font-family: "Jacques Francois", serif;
     color: #AF713D;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: italic;
     text-decoration: none;
   }
-  
+  /* -----login style------------ */
   .login_popup {
     margin-right: 5%;
       }
@@ -189,14 +190,90 @@ input {
     background-color: #e74c3c; 
     color: #fff; 
 } 
+/* --------search style----------- */
 
+.fa-search{
+    display: flex;
 
+    width: 2.6rem;
+    height: 2.5rem;
+    background-color: #AF713D;
+    transform: translateX(-60%);
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    align-content: center;
+    
+    /* align-items: center; */
+    cursor: pointer;
+    
+}
+/* -------search for newpage opened */
+ .search{
+    display: flex;
+    justify-content: center;
+}/*
+.search-bar-container {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.input{
+ border-radius: 40px;
+ width: 200%;
+}
+.fa-search_page{
+    display: flex;
+
+    width: 2.6rem;
+    height: 2.5rem;
+    background-color: #AF713D;
+    transform: translateX(-60%);
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    align-content: center;
+    
+    /* align-items: center; */
+    /* cursor: pointer;
+  
+}   */
+.search-container {
+    position: relative;
+    width: 400px;
+    height: 40px;
+  }
+  
+  #search-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .fa-search {
+    color: #fff;
+  }
+.resultResearch{
+    display: inline-flex;
+    justify-content: center;
+    background-color: #AF713D;
+}
 /* ------------------le style du hero section -------------- */
 .hero_section{
-    position: relative;
-    
-    
-    
+    position: relative;  
     text-align: center;  
 }
 .titleTrend{
@@ -258,7 +335,8 @@ input {
 /* ------------------le style du cuisine section -------------- */
 .bloc_cuisine {
     display: grid;
-    grid-template-columns: auto auto auto;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     column-gap: 5%;
     margin: 5%;
     text-align: justify;
@@ -384,6 +462,15 @@ footer{
 .button_read:hover{
     color: #E9967A;
     background-color: antiquewhite;
+}
+/* --------------------Add post----------------------------- */
+.add_post{
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    border: none;
+
+
 }
 /* --------------Page read more story caftan --------*/
 .page_trend1_caftan{
