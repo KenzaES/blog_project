@@ -14,6 +14,24 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
+  <!-------------------------- Add Post form----------------------------------->
+  <div class="add_popup"  id="popAdd">
+  <div class="add_form">
+    <h3>Add New Post</h3>
+    <form id="FormAdd" onsubmit="handleFormSubmit(event)">
+      <label>Title</label>
+      <input name="title" placeholder="title" id="titleID" required>
+      <label> Image:</label>
+      <input name="Image" type="file"  placeholder="image Post" id="photo" required>
+      <label>content:</label>
+      <textarea name="Content" type="text" placeholder="Content" id="ContentPost" required>
+      </textarea>
+      <button type="submit" class="btn" value="Submit">submit</button>
+      <button onclick="toggle_Add()" type="button" class="btn_cancel" >Close</button>
+    </form>
+  </div>
+</div>
+<!------------------------------NAV BARRE & header SECTION------------ -->
   <div class="body_main" id="main">
 <!----------------- Nav bar section ---------------->
   <header class="group_header">
@@ -58,7 +76,6 @@
     </form> 
   </div>
 </div>
-
 
 <!-------------------hero section---------------->
   <main class="hero_section" id="hero_section">
@@ -105,7 +122,7 @@
       <img class="pastilla_cuisine" src="image/pastilla.png" alt="pastilla">
       <a class="button_read" href="#">Read more</a>
       <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>    
+      <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a>    
     </article>
     <article class="tajine">
       <h3> Tajine </h3>
@@ -113,7 +130,7 @@
       <img class="tajine_cuisine" src="image/tajine.png" alt="tajine">
       <a class="button_read" href="#">Read more</a>   
       <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a> 
-      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
+      <a class="button_read delete_btn" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
     </article>
     <article class="couscous">
       <h3> Couscous </h3>
@@ -121,13 +138,15 @@
       <img class="couscous_cuisine" src="image/couscous.jpg" alt="couscous">
       <a class="button_read" href="#">Read more</a>
       <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-      <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
+      <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
     </article>
-
-   </div>
+    <article class="new_post" id="New_post">
+      
+    </article>
+  </div>
    <div class="add_post">
-    <button>
-      <a class="button_read" href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Add post</a>
+    <button id="Cuis_add" onclick="open_add_pop(this)">
+      <a class="button_read" href="#" onclick="open_add_pop(element)"><i class="fa fa-plus-square" aria-hidden="true"></i> Add post</a>
     </button>
    </div>
 
@@ -142,7 +161,7 @@
     <img class="caftan_fashion" src="image/caftan story.jpg" alt="Caftan">
     <a class="button_read" href="#">Read more</a>
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a> 
-    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>     
+    <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a>     
   </article>
   <article class="Jellaba">
     <h3 id="title_search"> The Moroccan Djellaba </h3>
@@ -150,18 +169,25 @@
     <img class="jellaba_fashion" src="image/djellaba.jpg" alt="jellaba">
     <a class="button_read" href="#">Read more</a>  
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
+    <a class="button_read delete_btn" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article>
-  <article class="Babouche">
+  <article class="Babouche" id="demo">
     <h3 id="title_search"> The genuine Moroccan leather babouche </h3>
     <p>We explain all about this handmade product typical of Moroccan culture and shaped by hand, from generation to generation, by craftsmen babouchiers</p>
     <img class="babouche_fashion" src="image/babouch.jpg" alt="babouche">
     <a class="button_read" href="#">Read more</a>   
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
+    <a class="button_read delete_btn"  href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
   </article> 
-
+  <article class="new_post" id="New_post">
+      
+  </article>
 </div>
+<div class="add_post">
+  <button id="Fash_add" onclick="open_add_pop(this)">
+    <a class="button_read" href="#"><i class="fa fa-plus-square" aria-hidden="true"></i> Add post</a>
+  </button>
+ </div>
 </section> 
 <!------------------- artisanal section ---------------->
 <section class="artisanal_section" id="artisanal_section">
@@ -173,7 +199,7 @@
     <img class="zelig_art" src="image/zelig_trend.jpg" alt="Zelig">
     <a class="button_read" href="#">Read more</a>  
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
+    <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article> 
   <article class="debagh">
     <h3 id="title_search"> Souk Debbaqh, the art of traditional tanning </h3>
@@ -181,7 +207,7 @@
     <img class="tanning_art" src="image/souk-debbagh.jpg" alt="Zelig">
     <a class="button_read" href="#">Read more</a>  
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-    <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
+    <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
   </article> 
 
 <article class="pottery">
@@ -192,10 +218,19 @@
   <img class="pot_art" src="image/pottery.jpg" alt="Zelig">
   <a class="button_read" href="#">Read more</a>  
   <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
-  <a class="button_read" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
+  <a class="button_read delete_btn" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i></a>  
 </article> 
+<article class="new_post" id="New_post">
+      
+</article>
 </div>
+<div class="add_post">
+  <button id="Art_add" onclick="open_add_pop(this)">
+    <a class="button_read" href="#" ><i class="fa fa-plus-square" aria-hidden="true"></i> Add post</a>
+  </button>
+ </div>
 </section>
+<!-------------------Footer Section------------------------->
 <footer>
  <div class=”container_footer”>
   <div class=”bloc_subcribe”>

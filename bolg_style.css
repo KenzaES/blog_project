@@ -18,8 +18,8 @@
 /* ------------------le style du body-------------- */
 body{
     background-image: url("image/background-opacity.png");
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+   height: 100vh;
     background-size: cover; /*pour ajuster size du background*/
     /* background-repeat: repeat; */
     background-position: center; /*pour que l'image reste au centre*/
@@ -293,7 +293,7 @@ input {
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 5%;
-    margin: 5%;
+    margin: 3%;
     
 }
 #trend1{
@@ -337,14 +337,15 @@ input {
     display: grid;
     /* grid-template-columns: auto auto auto; */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    column-gap: 5%;
-    margin: 5%;
+    column-gap: 1%;
+    margin: 3%;
     text-align: justify;
 }
 
 .pastilla,
 .tajine,
-.couscous {
+.couscous,
+.new_post {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
     height: 100%; 
@@ -359,14 +360,16 @@ input {
 /* ------------------le style du fashion section -------------- */
 .bloc_fashion{
     display: grid;
-    grid-template-columns: auto auto auto; 
-    column-gap: 5%;
-    margin: 5%;
+    /* grid-template-columns: auto auto auto;  */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 1%;
+    margin: 3%;
     text-align: justify;
 }
 .Caftan,
 .Babouche,
-.Jellaba
+.Jellaba,
+.new_post
 {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
@@ -382,15 +385,16 @@ input {
  /* ------------------le style du artisanal section -------------- */   
 .bloc_art{
     display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 5%;
-    margin: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 1%;
+    margin: 3%;
     text-align: justify;
 }
 
 .Zelig, 
 .pottery,
-.debagh{
+.debagh,
+.new_post{
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
     height: 100%; 
@@ -400,6 +404,15 @@ input {
     width: 95%;
     height: 200px;
     border-radius: 5px;
+}
+/* --------new post styling for posting time */
+.new_post{
+    display: none;
+    
+}
+.time_posted{
+    display: flex;
+    justify-content: space-around;
 }
 /* --------------footer section------------- */
 footer{
@@ -611,6 +624,7 @@ textarea {
     background-color: #e74c3c; 
     color: #fff; 
 } 
+/* ---------like icone--------- */
 .fa-thumbs-up{
     align-content: center;
 }
@@ -663,7 +677,113 @@ textarea {
 }
 
 
+/* --------------------- add post------------------------- */
+.add_popup { 
+    display: none;
+    z-index: 99999999999;
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(250, 250,250,0.5);
+    background-size: cover;
+    background-attachment: scroll;
+    backdrop-filter: blur(10px); 
+    scroll-behavior: smooth;
+    justify-content: center; 
+    align-items: center; 
+    
+    
+} 
+.com_btn{
+    background-color: #E9967A;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px; 
+}
+.com_btn:hover{
+    color: #E9967A;
+    background-color: antiquewhite;
+}
 
+.add_form{ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+    position:fixed; 
+    margin-top: 5%;
+    /* top: 40%;  */
+    left: 30%;
+   
+    background: rgba(255,255,255,0.8);
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width:50%;
+    overflow: hidden;
+   
+    
+} 
+
+/* 
+.FormAdd{ 
+    display: flex; 
+    flex-direction: column; 
+    
+}  */
+
+label { 
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #444; 
+    text-align: left; 
+} 
+
+input { 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    width: 90%; 
+    
+} 
+textarea { 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    width: 90%; 
+    
+} 
+.btn, 
+.btn_cancel { 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+   
+} 
+
+.btn { 
+    background-color: #CD8332; 
+    color: #fff; 
+} 
+
+.btn_cancel { 
+    margin-top: 12px; 
+    background-color: #e74c3c; 
+    color: #fff; 
+} 
 /* 
 aside {
     width: 30%;
@@ -673,3 +793,6 @@ aside {
 } */
 
 /* Like option */
+
+
+
