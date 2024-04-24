@@ -273,7 +273,10 @@ window.addEventListener("load", function() {
   document.getElementById("coment_post").innerHTML = commentsHTML;
 });
 
-
+// --------------function Edit
+function Edit_post(){
+  
+}
 
 // ----function like counter ------
 function clickCounter() {

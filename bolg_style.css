@@ -97,7 +97,7 @@ nav li:hover{
   }
   /* -----login style------------ */
   .login_popup {
-    margin-right: 5%;
+    margin-right: 1%;
       }
   .login_popup_btn{
         display: flex;
@@ -123,6 +123,7 @@ nav li:hover{
 
 
 .login_popup_wind { 
+    
     display: none;
     position: absolute; 
     top: 0; 
@@ -492,8 +493,6 @@ footer{
     justify-content: center;
     background-color: none;
     border: none;
-
-
 }
 /* --------------Page read more story caftan --------*/
 .page_trend1_caftan{
@@ -825,8 +824,51 @@ textarea {
   #topnav_responsive_menu {
     display: none;
   }
-  
+/* ---------------------------------------------------------------- */
+/* --------------------------- mediaQuerry Mobile------------------------------------ */
   @media only screen and (max-width: 768px) {
+    .add_post{
+        display: flex;
+        justify-content: center;
+        margin-top: 20%;
+        margin-bottom: 3%;
+        
+    }
+    .bloc_hero{
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 2%;
+        margin: 3%;
+        
+    }
+    .bloc_cuisine {
+        display: grid;
+       
+       grid-template-columns: auto;
+       row-gap: 2%;
+       margin: 3%;
+       text-align: justify;
+    
+   }
+   .bloc_fashion {
+    display: grid;
+   
+   grid-template-columns: auto;
+   row-gap: 2%;
+   margin: 3%;
+   text-align: justify;
+
+}
+   
+.bloc_art{
+    display: grid;
+   
+   grid-template-columns: auto;
+   row-gap: 2%;
+   margin: 3%;
+   text-align: justify;
+
+}
     /* hide classic menu */
     .navbar {
       display: none;
