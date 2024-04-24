@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jacques+Francois&family=Jaldi:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
 <!-- fa fa font -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+</head>
 <body>
   <!-------------------------- Add Post form----------------------------------->
   <div class="add_popup"  id="popAdd">
@@ -22,7 +22,7 @@
       <label>Title</label>
       <input name="title" placeholder="title" id="titleID" required>
       <label> Image:</label>
-      <input name="Image" type="file"  placeholder="image Post" id="photo" required>
+      <input name="Image" type="url"  placeholder="image Post" id="photo" required>
       <label>content:</label>
       <textarea name="Content" type="text" placeholder="Content" id="ContentPost" required>
       </textarea>
@@ -45,22 +45,34 @@
         <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
         <!-- <li>  <a href="#">Add Article</a>   </li> -->
       </ul> 
-      <!-- NavMobile -->
-      <!-- <div class="burger_menu">
-        <i class="fa-duotone fa-bars" style="--fa-primary-color: #cd8332; --fa-secondary-color: #cd8332;"></i>
-      </div> -->
-      
     </nav>
+    
     <!-- Search icon -->
 
   <a class="fa fa-search fa-2x" href="result_research.html" id="search_btn"></a>
 
-      
+  
     <!----------- login btn--------------->
       <div class="login_popup">
       <button onclick="open_log_pop()" class="login_popup_btn" id="login_btn">Login</button> 
     </div>
+    <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+      <!-- Some spans to act as a hamburger -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
 
+    <!-- Responsive Menu -->
+    <nav role="navigation" id="topnav_responsive_menu">
+      <ul>
+        <li>  <a href="Blog_code.html">Home</a>            </li>
+        <li>  <a href="#About_section">About</a>           </li>
+        <li>  <a href="#Cuisine_section">Cuisine</a>         </li>
+        <li>  <a href="#fashion_section">Fashion</a>         </li>
+        <li>  <a href="#artisanal_section">Artisanal Art</a>   </li>
+      </ul>
+    </nav>
 </header>
 <!-----------------------sign in  ------------------->
 <div class="login_popup_wind" id="log_wind">
@@ -140,7 +152,7 @@
       <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>  
       <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a> 
     </article>
-    <article class="new_post" id="New_post">
+    <article class="new_post" id="New_post" >
       
     </article>
   </div>
@@ -159,7 +171,7 @@
     <h3 id="title_search"> The story of Moroccan Caftan</h3>
     <p>Although the origins of the Caftans are said to be outside of Morocco and it wasn’t originally worn only by women, the Moroccan Caftan seems to be its own thing.</p>
     <img class="caftan_fashion" src="image/caftan story.jpg" alt="Caftan">
-    <a class="button_read" href="#">Read more</a>
+    <a class="button_read" href="post_page_trend1.html">Read more</a>
     <a class="button_read" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a> 
     <a class="button_read delete_btn" href="#" > <i class="fa fa-trash-o" aria-hidden="true"></i></a>     
   </article>

@@ -10,6 +10,10 @@ function updatePopupPosition() {
 // Update popup position when the page is scrolled
 window.addEventListener('scroll', updatePopupPosition);
 // ---------------------------------------------------------------------------------------------
+// -------close popup add--------
+function toggle_Add() {
+  document.getElementById('popAdd').style.display = 'none';
+}
 // ---------------------------------------Add function------------------------------------------
 // Function to open the pop-up and get the ID of the button
 function open_add_pop(element) {
@@ -21,19 +25,13 @@ function open_add_pop(element) {
   // Handle different button cases with a switch statement
   switch (idDuBouton) {
     case "Cuis_add":
-      console.log("Cuis_add button.");
-      createPost("cuisine");
+      createPost("cuisine_section");
       break;
     case "Fash_add":
-      console.log("Fash_add button.");
-      createPost("fashion");
+      createPost("fashion_section");
       break;
     case "Art_add":
-      console.log("Art_add button.");
-      createPost("art");
-      break;
-    default:
-      console.log("Unknown button ID.");
+      createPost("artisanal_section");
       break;
   }
 }
@@ -52,7 +50,7 @@ function createPost(section) {
   const postId = Date.now();
 
   const newPostHTML = `
-   <article class="new_post" data-post-id="${postId}>
+   <article class="new_post" data-post-id="${postId}">
     <h3> ${title_post} </h3>
     <p>${content_post}</p>
     <img  class="new_post_${section}" src="${image_post}" alt="New_post">
@@ -104,27 +102,50 @@ window.addEventListener("load", function () {
   });
 });
 
-
-function toggle_Add() {
-  document.getElementById('popAdd').style.display = 'none';
-}
-
 // ------------------Delete-----------------------
 document.addEventListener("click", function (event) {
-  if (event.target.closest(".delete_btn")) {  // If the click is on a delete button
-    alert("your post will be deleted")
-    const postElement = event.target.closest(".new_post");  // Get the parent post
-    const postId = postElement.getAttribute("data-post-id");  // Get the post ID
+  const deleteButton = event.target.closest(".delete_btn");
+  if (deleteButton) {
+    alert("Your post will be deleted");
+    const postElement = deleteButton.closest(".new_post");
+    const postId = postElement.getAttribute("data-post-id");
 
-    // Remove the post from the DOM
     postElement.remove();
+    localStorage.clear(postElement)
 
-    // Update localStorage to remove the post
     let postsData = JSON.parse(localStorage.getItem("posts")) || [];
-    postsData = postsData.filter((post) => post.id !== postId);
+    // Remove the post with the matching ID
+    postsData = postsData.filter((post) => post.id != postId);
     localStorage.setItem("posts", JSON.stringify(postsData));
   }
 });
+
+window.addEventListener("load", function () {
+  let postsData = JSON.parse(localStorage.getItem("posts")) || [];
+  let postsHTML = "";
+
+  postsData = postsData.filter((post) => post.content_post.trim() !== ""); // Remove posts with empty content
+
+  postsData.forEach((post) => {
+    if (post.html) {
+      postsHTML += post.html;
+    }
+  });
+
+  document.getElementById("New_post").innerHTML = postsHTML;
+
+  // Ensure that only non-empty posts are displayed
+  document.querySelectorAll(".new_post").forEach((post) => {
+    const postContent = post.querySelector("p").textContent.trim();
+    if (postContent === "") {
+      post.remove(); // Remove empty posts
+    } else {
+      post.style.display = "block"; // Display non-empty posts
+    }
+  });
+});
+
+
 
 //------------search function--------
 document.addEventListener("click", search_treat);
@@ -298,15 +319,19 @@ deleteButtons.forEach(button => {
   });
 });
 
+// ---------responsive menu hamburger
 
-
-
-
-
-
-//-------------------Add function--------------------------
-function AddPost(){
-element.addEventListener('click')
-
-
+function showResponsiveMenu() {
+  var menu = document.getElementById("topnav_responsive_menu");
+  var icon = document.getElementById("topnav_hamburger_icon");
+  var root = document.getElementById("root");
+  if (menu.className === "") {
+    menu.className = "open";
+    icon.className = "open";
+    root.style.overflowY = "hidden";
+  } else {
+    menu.className = "";                    
+    icon.className = "";
+    root.style.overflowY = "";
+  }
 }
